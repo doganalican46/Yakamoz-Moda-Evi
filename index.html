@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>One Page Wonder - Start Bootstrap Template</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#page-top">YAKAMOZ MODA EVİ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#content">HAKKIMIZDA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sosyalmedya">SOSYAL MEDYA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#yoltarifi">ADRES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">İLETİŞİM</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header-->
+    <header class="masthead text-center text-white">
+        <div class="masthead-content">
+            <div class="container px-5">
+                <h1 class="masthead-heading mb-0">YAKAMOZ MODA EVİ</h1>
+                <h2 class="masthead-subheading mb-0">Kaliteli Giyimde Lider...</h2>
+                <a class="btn btn-dark btn-xl rounded-pill mt-5" onclick="kopyalaIBAN()">IBAN KOPYALA</a>
+                <a class="btn btn-dark btn-xl rounded-pill mt-5"
+                    href="https://www.google.com/maps/dir//Yakamoz+Moda+Evi+Cumhuriyet+Mahallesi+Narl%C4%B1+Atat%C3%BCrk+Cd.,+46710+Pazarc%C4%B1k%2FKahramanmara%C5%9F/@37.3932295,37.1407167,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x152dfd5b96447097:0x834c135881acbe9a"
+                    target="_blank">YOL TARİFİ AL</a>
+
+            </div>
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <!-- Header-->
+
+    <script>
+        function kopyalaIBAN() {
+            var ibanText = "TR77 0006 4000 0016 4500 5025 28";
+            var range = document.createRange();
+            var tempElement = document.createElement("div");
+            tempElement.style.position = 'absolute';
+            tempElement.style.left = '-9999px';
+            document.body.appendChild(tempElement);
+            tempElement.appendChild(document.createTextNode(ibanText));
+            range.selectNodeContents(tempElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+            alert("IBAN başarıyla kopyalandı! Mobil Bankacılık Uygulamanıza Girebilirsiniz...");
+            document.body.removeChild(tempElement);
+        }
+    </script>
+
+
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 400px;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+
+
+    <!-- Content section -->
+    <section id="content">
+        <div class="container px-5 mt-5 mb-5">
+            <h5 class="text-uppercase mb-4">HAKKIMIZDA</h5>
+
+            <p class="mb-5">
+                Yakamoz Moda Evi 2005 yılında Kahramanmaraş'ın Pazarcık ilçesine bağlı Narlı Kasabasında
+                kurulmuştur.
+                Mağazamızda her yaşa uygun kıyafetler bulunmaktadır.
+            </p>
+            
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="assets/img/erkek.jpg" class="card-img-top"
+                            alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">ERKEK ÜRÜNLERİMİZ</h5>
+                            <p class="card-text">
+                                Her yaşa uygun erkek t-shirt, kot, çeket, mont, keten, kumaş, iç çamaşırı ve çorap
+                                bulunur...
+                            </p>
+                            <a href="#!" class="btn btn-dark">DETAY GÖR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="assets/img/kadın.jpg" class="card-img-top"
+                            alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">KADIN ÜRÜNLERİMİZ</h5>
+                            <p class="card-text">
+                                Her yaşa uygun kadın t-shirt, kot, çeket, mont, keten, kumaş, iç
+                                çamaşırı ve çorap bulunur... </p>
+                                <a href="#!" class="btn btn-dark">DETAY GÖR</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="assets/img/çocuk.jpg" class="card-img-top"
+                            alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">ÇOCUK ÜRÜNLERİMİZ</h5>
+                            <p class="card-text">
+                                Her yaşa uygun kız-erkek çocuğu için t-shirt, kot, çeket, mont, iç
+                                çamaşırı ve çorap bulunur...
+                            </p>
+                            <a href="#!" class="btn btn-dark">DETAY GÖR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="assets/img/yaşlı.jpg" class="card-img-top"
+                            alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">YAŞLI ÜRÜNLERİMİZ</h5>
+                            <p class="card-text">
+                                Bay-bayan t-shirt, kot, anne bluz, çeket, mont, keten, kumaş, iç
+                                çamaşırı ve çorap bulunur...
+                            </p>
+                            <a href="#!" class="btn btn-dark">DETAY GÖR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="assets/img/abiye.jpg" class="card-img-top"
+                            alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">ABİYELERİMİZ</h5>
+                            <p class="card-text">
+                                Her bedene uygun düğün ve her türlü özel günler için çeşitli
+                                abiyelerimiz bulunmaktadır... (KİRALIK DEĞİLDİR)
+                            </p>
+                            <a href="#!" class="btn btn-dark">DETAY GÖR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="assets/img/okul.jpg" class="card-img-top"
+                            alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">OKUL KIYAFETLERİ</h5>
+                            <p class="card-text">
+                                Narlı'da bulunan Çimko, 26 Ocak ilk ve orta okul kıyafetleri, KİPAŞ
+                                Lisesi Okul Kıyafetleri ve Evri Okul Kıyafetleri Bulunmaktadır...
+                            </p>
+                            <a href="#!" class="btn btn-dark">DETAY GÖR</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <hr>
+
+    <!-- sosyal medya section -->
+    <section id="sosyalmedya">
+        <div class="container px-5 mt-5 mb-5">
+            <h5 class="text-uppercase mb-4">SOSYAL MEDYA HESAPLARIMIZ</h5>
+            <p></p>
+            <div class="mt-4">
+                <!-- Facebook -->
+                <a type="button" style="background-color: blue; color: white;" class="btn btn-floating  btn-lg"
+                    href="https://www.facebook.com/YakamozModaEvi/" target="_blank">
+                    Facebook | <i class="fab fa-facebook-f"></i> </a>
+                <!-- Instagram -->
+                <a type="button" class="btn btn-floating btn-danger btn-lg"
+                    href="https://www.instagram.com/yakamozmodaevi/" target="_blank">Instagram | <i
+                        class="fab fa-instagram"></i></a>
+                <!-- WhatsApp -->
+                <a type="button" class="btn btn-floating btn-success btn-lg" href="#" target="_blank">WhatsApp | <i
+                        class="fab fa-whatsapp"></i></a>
+                <!-- Google + -->
+                <a type="button" class="btn btn-floating btn-light btn-lg"
+                    href="https://www.google.com/search?q=yakamoz+moda+evi&oq=yakamoz&gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MggIABBFGCcYOzIICAEQRRgnGDsyCQgCEEUYORiABDIGCAMQRRhAMgwIBBAuGBQYhwIYgAQyDAgFEAAYFBiHAhiABDIGCAYQRRg8MgYIBxBFGD3SAQgzNzgxajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#ip=1"
+                    target="_blank">Google | <i class="fab fa-google-plus-g"></i></a>
+            </div>
+            
+        </div>
+
+        
+    </section>
+    <!-- sosyal medya section -->
+
+    <hr>
+
+    <!-- yol tarifi section -->
+    <section id="yoltarifi">
+        <div class="container px-5 mt-5 mb-5">
+
+
+            <div class="row">
+                <div class="col">
+                    <h5 class="text-uppercase mb-4">YOL TARİFİ</h5>
+                    <div class="adres">
+                        <h6>ADRES:</h6>
+                        <p>Narlı Cumhuriyet Mahallesi, Atatürk Caddesi No:22/D PAZARCIK/KAHRAMANMARAŞ</p>
+                    </div>
+                    <div class="postakodu">
+                        <h6>POSTA KODU:</h6>
+                        <p>46710</p>
+                    </div>
+                    <div class="postakodu">
+                        <h6>TELEFON:</h6>
+                        <p>+90 535 443 48 72</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.8561633988816!2d37.13814177633033!3d37.393233734045936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152dfd5b96447097%3A0x834c135881acbe9a!2sYakamoz%20Moda%20Evi!5e0!3m2!1sen!2str!4v1699544048595!5m2!1sen!2str"
+                            class="embed-responsive-item" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <a class="btn btn-dark btn-xl rounded-pill mt-5"
+                    href="https://www.google.com/maps/dir//Yakamoz+Moda+Evi+Cumhuriyet+Mahallesi+Narl%C4%B1+Atat%C3%BCrk+Cd.,+46710+Pazarc%C4%B1k%2FKahramanmara%C5%9F/@37.3932295,37.1407167,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x152dfd5b96447097:0x834c135881acbe9a"
+                    target="_blank">YOL TARİFİ AL</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- yol tarifi section -->
+
+
+
+
+
+    <!-- Footer-->
+    <footer id="contact" class="text-white text-center text-lg-start bg-dark">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row mt-4">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">İLETİŞİM</h5>
+
+                    <p>
+                        Yakamoz Moda Evi 2005 yılında Kahramanmaraş'ın Pazarcık ilçesine bağlı Narlı Kasabasında
+                        kurulmuştur.
+                        Mağazamızda her yaşa uygun kıyafetler bulunmaktadır.
+                    </p>
+
+
+                    <div class="mt-4">
+                        <!-- Facebook -->
+                        <a type="button" style="background-color: blue; color: white;"
+                            class="btn btn-floating btn-light btn-lg" href="https://www.facebook.com/YakamozModaEvi/"
+                            target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <!-- Instagram -->
+                        <a type="button" class="btn btn-floating btn-danger btn-lg"
+                            href="https://www.instagram.com/yakamozmodaevi/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <!-- WhatsApp -->
+                        <a type="button" class="btn btn-floating btn-success btn-lg" href="#" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <!-- Google + -->
+                        <a type="button" class="btn btn-floating btn-light btn-lg"
+                            href="https://www.google.com/search?q=yakamoz+moda+evi&oq=yakamoz&gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MggIABBFGCcYOzIICAEQRRgnGDsyCQgCEEUYORiABDIGCAMQRRhAMgwIBBAuGBQYhwIYgAQyDAgFEAAYFBiHAhiABDIGCAYQRRg8MgYIBxBFGD3SAQgzNzgxajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#ip=1"
+                            target="_blank"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+
+
+                    <ul class="fa-ul" style="margin-left: 1.65em;">
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Narlı Cumhuriyet
+                                Mahallesi, Atatürk Caddesi No:22/D PAZARCIK/KAHRAMANMRAŞ</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span><span
+                                class="ms-2">yakamozmodaevi@hotmail.com</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+90 535 443 48
+                                72</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Açık Olduğumuz Saatler</h5>
+
+                    <table class="table text-center text-white">
+                        <tbody class="fw-normal">
+                            <tr>
+                                <td>Pazartesi - Cumartesi</td>
+                                <td>08.00 - 18.00</td>
+                            </tr>
+                            <tr>
+                                <td>Pazar</td>
+                                <td>10.00-14.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Ali Can Doğan Tarafından Tasarlanmıştır... |
+            <a class="text-white" href="https://www.doganalican46.dev/">doganalican46.dev</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer-->
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
