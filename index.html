@@ -24,8 +24,41 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
+<style>
+    .whatsapp-btn,
+    .scroll-to-top-btn {
+        position: fixed;
+        bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 20%;
+        color: #fff;
+        text-align: center;
+        font-size: 20px;
+        z-index: 1000;
+    }
+
+    .whatsapp-btn {
+        background-color: #25D366;
+        right: 80px;
+        padding: 15px;
+    }
+
+    .scroll-to-top-btn {
+        background-color: #FF3E30;
+        right: 20px;
+        padding: 15px;
+    }
+</style>
 
 <body id="page-top">
+
+    <a type="button" class="whatsapp-btn" href="https://wa.me/+905354434872" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a class="scroll-to-top-btn" id="scroll-to-top-button" href="#">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
@@ -55,7 +88,6 @@
                 <a class="btn btn-dark btn-xl rounded-pill mt-5"
                     href="https://www.google.com/maps/dir//Yakamoz+Moda+Evi+Cumhuriyet+Mahallesi+Narl%C4%B1+Atat%C3%BCrk+Cd.,+46710+Pazarc%C4%B1k%2FKahramanmara%C5%9F/@37.3932295,37.1407167,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x152dfd5b96447097:0x834c135881acbe9a"
                     target="_blank">YOL TARİFİ AL</a>
-
             </div>
         </div>
         <div class="bg-circle-1 bg-circle"></div>
@@ -95,25 +127,91 @@
             transform: scale(1.1);
             transition: transform 0.3s ease-in-out;
         }
+
+        .current-info {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        .current-info h6 {
+            margin: 5px 0;
+        }
+        
+    
     </style>
 
 
     <!-- Content section -->
     <section id="content">
         <div class="container px-5 mt-5 mb-5">
-            <h5 class="text-uppercase mb-4">HAKKIMIZDA</h5>
+            <h5 class="mb-4">HAKKIMIZDA</h5>
 
             <p class="mb-5">
-                Yakamoz Moda Evi 20 yılı aşkın süredir Kahramanmaraş'ın Pazarcık ilçesine bağlı Narlı Kasabasında
+                Yakamoz Moda Evi 20 yılı aşkın süredir Kahramanmaraş'ın Pazarcık ilçesine bağlı Narlı Cumhuriyet
+                Mahallesinde
                 bulunan giyim mağazasıdır.
                 Mağazamızda her yaşa uygun kıyafetler bulunmaktadır.
             </p>
-            
+            <hr>
+            <!--Grid column-->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">AÇIK OLDUĞUMUZ SAATLER:</h5>
+
+                    <table class="table text-center table-hover ">
+                        <tbody class="fw-normal">
+                            <tr>
+                                <td>Pazartesi </td>
+                                <td>08.00 - 18.00</td>
+                            </tr>
+                            <tr>
+                                <td>Salı </td>
+                                <td>08.00 - 18.00</td>
+                            </tr>
+                            <tr>
+                                <td>Çarşamba </td>
+                                <td>08.00 - 18.00</td>
+                            </tr>
+                            <tr>
+                                <td>Perşembe </td>
+                                <td>08.00 - 18.00</td>
+                            </tr>
+                            <tr>
+                                <td>Cuma </td>
+                                <td>08.00 - 18.00</td>
+                            </tr>
+                            <tr>
+                                <td>Cumartesi </td>
+                                <td>08.00 - 18.00</td>
+                            </tr>
+                            <tr>
+                                <td>Pazar</td>
+                                <td>10.00-14.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--Grid column-->
+
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Şu an </h5>
+                    <div class="current-info">
+                        <h6>Tarih:</h6>
+                        <h6 id="current-date">[Buraya anlık tarih gelecek]</h6>
+                        <h6>Saat:</h6>
+                        <h6 id="current-time">[Buraya anlık saat gelecek]</h6>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="assets/img/erkek.jpg" class="card-img-top"
-                            alt="Waterfall" />
+                        <img src="assets/img/erkek.jpg" class="card-img-top" alt="Waterfall" />
                         <div class="card-body">
                             <h5 class="card-title">ERKEK ÜRÜNLERİMİZ</h5>
                             <p class="card-text">
@@ -126,21 +224,19 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="assets/img/kadın.jpg" class="card-img-top"
-                            alt="Waterfall" />
+                        <img src="assets/img/kadın.jpg" class="card-img-top" alt="Waterfall" />
                         <div class="card-body">
                             <h5 class="card-title">KADIN ÜRÜNLERİMİZ</h5>
                             <p class="card-text">
                                 Her yaşa uygun kadın t-shirt, kot, çeket, mont, keten, kumaş, iç
                                 çamaşırı ve çorap bulunur... </p>
-                                <a href="#!" class="btn btn-dark">DETAY GÖR</a>
-                            </div>
+                            <a href="#!" class="btn btn-dark">DETAY GÖR</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="assets/img/çocuk.jpg" class="card-img-top"
-                            alt="Waterfall" />
+                        <img src="assets/img/çocuk.jpg" class="card-img-top" alt="Waterfall" />
                         <div class="card-body">
                             <h5 class="card-title">ÇOCUK ÜRÜNLERİMİZ</h5>
                             <p class="card-text">
@@ -153,8 +249,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="assets/img/yaşlı.jpg" class="card-img-top"
-                            alt="Waterfall" />
+                        <img src="assets/img/yaşlı.jpg" class="card-img-top" alt="Waterfall" />
                         <div class="card-body">
                             <h5 class="card-title">YAŞLI ÜRÜNLERİMİZ</h5>
                             <p class="card-text">
@@ -167,8 +262,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="assets/img/abiye.jpg" class="card-img-top"
-                            alt="Waterfall" />
+                        <img src="assets/img/abiye.jpg" class="card-img-top" alt="Waterfall" />
                         <div class="card-body">
                             <h5 class="card-title">ABİYELERİMİZ</h5>
                             <p class="card-text">
@@ -181,8 +275,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="assets/img/okul.jpg" class="card-img-top"
-                            alt="Waterfall" />
+                        <img src="assets/img/okul.jpg" class="card-img-top" alt="Waterfall" />
                         <div class="card-body">
                             <h5 class="card-title">OKUL KIYAFETLERİ</h5>
                             <p class="card-text">
@@ -199,6 +292,33 @@
             </div>
         </div>
     </section>
+
+    <script>
+        var today = new Date();
+        var currentDay = today.getDay(); // 0: Pazar, 1: Pazartesi, ..., 6: Cumartesi
+        var currentHour = today.getHours();
+
+        var isOpen = (currentHour >= 8 && currentHour < 18); // Açık saatleri kontrol et
+
+        // Anlık tarih ve saat bilgisini güncelle
+        document.getElementById("current-date").innerText = today.toLocaleDateString();
+        document.getElementById("current-time").innerText = today.getHours().toString().padStart(2, '0') + ":" + today.getMinutes().toString().padStart(2, '0');
+
+        // Şu an açık mı, kapalı mı kontrol et
+        var statusElement = document.querySelector(".text-uppercase.mb-4");
+        if (isOpen) {
+            statusElement.innerText = "Şu an Açığız! Mağazamıza bekleriz...";
+            statusElement.style.color = "green"; // Yeşil renk
+        } else {
+            var openingHour = 8;
+            if (currentHour >= 18) {
+                openingHour = 8; // Yarın saat 8'de açılıyor
+            }
+
+            statusElement.innerText = "Şu an Kapalıyız. Yarın saat " + openingHour.toString().padStart(2, '0') + ":00'de açılacağız.";
+            statusElement.style.color = "red"; // Kırmızı renk
+        }
+    </script>
 
 
 
@@ -220,17 +340,19 @@
                     href="https://www.instagram.com/yakamozmodaevi/" target="_blank">Instagram | <i
                         class="fab fa-instagram"></i></a>
                 <!-- WhatsApp -->
-                <a type="button" class="btn btn-floating btn-success btn-lg" href="https://wa.me/+905354434872" target="_blank">WhatsApp | <i
-                        class="fab fa-whatsapp"></i></a>
+                <a type="button" class="btn btn-floating btn-success btn-lg" href="https://wa.me/+905354434872"
+                    target="_blank">WhatsApp | <i class="fab fa-whatsapp"></i></a>
                 <!-- Google + -->
                 <a type="button" class="btn btn-floating btn-light btn-lg"
                     href="https://www.google.com/search?q=yakamoz+moda+evi&oq=yakamoz&gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MggIABBFGCcYOzIICAEQRRgnGDsyCQgCEEUYORiABDIGCAMQRRhAMgwIBBAuGBQYhwIYgAQyDAgFEAAYFBiHAhiABDIGCAYQRRg8MgYIBxBFGD3SAQgzNzgxajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#ip=1"
                     target="_blank">Google | <i class="fab fa-google-plus-g"></i></a>
+                <a type="button" class="btn btn-floating btn-warning btn-lg" href="#!" target="_blank">Telefon | <i
+                        class="fas fa-phone"></i></a>
             </div>
-            
+
         </div>
 
-        
+
     </section>
     <!-- sosyal medya section -->
 
@@ -265,8 +387,8 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <a class="btn btn-dark btn-xl rounded-pill mt-5"
-                    href="https://www.google.com/maps/dir//Yakamoz+Moda+Evi+Cumhuriyet+Mahallesi+Narl%C4%B1+Atat%C3%BCrk+Cd.,+46710+Pazarc%C4%B1k%2FKahramanmara%C5%9F/@37.3932295,37.1407167,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x152dfd5b96447097:0x834c135881acbe9a"
-                    target="_blank">YOL TARİFİ AL</a>
+                        href="https://www.google.com/maps/dir//Yakamoz+Moda+Evi+Cumhuriyet+Mahallesi+Narl%C4%B1+Atat%C3%BCrk+Cd.,+46710+Pazarc%C4%B1k%2FKahramanmara%C5%9F/@37.3932295,37.1407167,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x152dfd5b96447097:0x834c135881acbe9a"
+                        target="_blank">YOL TARİFİ AL</a>
                 </div>
             </div>
         </div>
@@ -288,9 +410,10 @@
                     <h5 class="text-uppercase mb-4">İLETİŞİM</h5>
 
                     <p>
-                        Yakamoz Moda Evi 20 yılı aşkın süredir Kahramanmaraş'ın Pazarcık ilçesine bağlı Narlı Kasabasında
-                bulunan giyim mağazasıdır.
-                Mağazamızda her yaşa uygun kıyafetler bulunmaktadır.
+                        Yakamoz Moda Evi 20 yılı aşkın süredir Kahramanmaraş'ın Pazarcık ilçesine bağlı Narlı
+                        Kasabasında
+                        bulunan giyim mağazasıdır.
+                        Mağazamızda her yaşa uygun kıyafetler bulunmaktadır.
                     </p>
 
 
@@ -304,8 +427,8 @@
                             href="https://www.instagram.com/yakamozmodaevi/" target="_blank"><i
                                 class="fab fa-instagram"></i></a>
                         <!-- WhatsApp -->
-                        <a type="button" class="btn btn-floating btn-success btn-lg" href="https://wa.me/+905354434872" target="_blank"><i
-                                class="fab fa-whatsapp"></i></a>
+                        <a type="button" class="btn btn-floating btn-success btn-lg" href="https://wa.me/+905354434872"
+                            target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <!-- Google + -->
                         <a type="button" class="btn btn-floating btn-light btn-lg"
                             href="https://www.google.com/search?q=yakamoz+moda+evi&oq=yakamoz&gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MggIABBFGCcYOzIICAEQRRgnGDsyCQgCEEUYORiABDIGCAMQRRhAMgwIBBAuGBQYhwIYgAQyDAgFEAAYFBiHAhiABDIGCAYQRRg8MgYIBxBFGD3SAQgzNzgxajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#ip=1"
