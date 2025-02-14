@@ -84,7 +84,6 @@
             <div class="container px-5">
                 <h1 class="masthead-heading mb-0">YAKAMOZ MODA EVİ</h1>
                 <h2 class="masthead-subheading mb-0">Kaliteli Giyimde Lider...</h2>
-                <a class="btn btn-dark btn-xl rounded-pill mt-5" onclick="kopyalaIBAN()">IBAN KOPYALA</a>
                 <a class="btn btn-dark btn-xl rounded-pill mt-5"
                     href="https://www.google.com/maps/dir//Yakamoz+Moda+Evi+Cumhuriyet+Mahallesi+Narl%C4%B1+Atat%C3%BCrk+Cd.,+46710+Pazarc%C4%B1k%2FKahramanmara%C5%9F/@37.3932295,37.1407167,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x152dfd5b96447097:0x834c135881acbe9a"
                     target="_blank">YOL TARİFİ AL</a>
@@ -97,38 +96,7 @@
     </header>
     <!-- Header-->
 
-    <script>
-        function kopyalaIBAN() {
-            var bankChoice = prompt("Hangi bankanın IBAN'ını kopyalamak istersiniz?\n1. Halk Bankası\n2. İş Bankası");
-
-            var ibanText = "";
-
-            if (bankChoice === "1") {
-                ibanText = "TR80 0001 2009 4740 0009 0001 28"; // Halk Bankası IBAN
-                // window.location.href = "https://play.google.com/store/apps/details?id=com.tmobtech.halkbank"; // Halk Bankası uygulama linki
-            } else if (bankChoice === "2") {
-                ibanText = "TR04 0006 4000 0016 4500 4802 71"; // İş Bankası IBAN
-                // window.location.href = "https://play.google.com/store/apps/details?id=com.pozitron.iscep "; // İş Bankası uygulama linki
-            } else {
-                alert("Geçersiz seçim. Lütfen 1 veya 2 girin.");
-                return;
-            }
-
-            var range = document.createRange();
-            var tempElement = document.createElement("div");
-            tempElement.style.position = 'absolute';
-            tempElement.style.left = '-9999px';
-            document.body.appendChild(tempElement);
-            tempElement.appendChild(document.createTextNode(ibanText));
-            range.selectNodeContents(tempElement);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
-            document.execCommand("copy");
-            window.getSelection().removeAllRanges();
-            alert("IBAN başarıyla kopyalandı! Mobil Bankacılık Uygulamanıza Girebilirsiniz...");
-            document.body.removeChild(tempElement);
-        }
-    </script>
+ 
 
 
 
